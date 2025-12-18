@@ -1,10 +1,30 @@
-<html>
-  <head>
-    <script src=« https://aframe.io/releases/1.5.0/aframe.min.js »></script>
-  </head>
-  <body>
-    <a-scene>
-      <a-sky src=« image360.jpg »></a-sky>
-    </a-scene>
-  </body>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Fireplace 1.0</title>
+
+  <!-- A-FRAME -->
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+</head>
+
+<body>
+  <a-scene>
+
+    <!-- Image -->
+    <a-assets>
+      <img id="salon" src="assets/images/salon.jpg">
+    </a-assets>
+
+    <!-- Fond -->
+    <a-sky src="#salon" rotation="0 -90 0"></a-sky>
+
+    <!-- Repères XYZ -->
+    <a-entity axis-helper="size: 5"></a-entity>
+
+    <!-- Caméra -->
+    <a-entity camera position="0 1.6 0" look-controls></a-entity>
+
+  </a-scene>
+</body>
 </html>
