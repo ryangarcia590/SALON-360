@@ -2,14 +2,26 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Test A-Frame</title>
+  <title>Fireplace 1.0</title>
   <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
 </head>
 
 <body>
   <a-scene>
+    
+    <a-assets>
+      <img id="salon" src="assets/images/salon.png">
+    </a-assets>
+
+    <!-- Environnement -->
+    <a-sky src="#salon"></a-sky>
+
+    <!-- Cube de repère -->
     <a-box position="0 1.5 -3" color="red"></a-box>
-    <a-sky color="#222"></a-sky>
+
+    <!-- Caméra -->
+    <a-entity camera position="0 1.6 0" look-controls></a-entity>
+
   </a-scene>
 </body>
 </html>
